@@ -1,4 +1,4 @@
-#i FLYOS Project
+# i FLYOS Project
 
 # 教你玩转iFLYOS前/后拦截器
 - 刘立明 2019.5.1
@@ -37,7 +37,6 @@ iFLYOS平台推出以来，有越来越多的开发者加入了体验的行列�
  - 创建webapi应用并配置该技能
  - 在 准备阶段 创建的设备中配置前置拦截器。操作步骤如图
  ![](https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_1.png)
- 
  ![](.https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_2.png)
 
 #### 服务开发
