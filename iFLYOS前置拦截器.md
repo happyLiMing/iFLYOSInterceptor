@@ -39,7 +39,7 @@ iFLYOS平台推出以来，有越来越多的开发者加入了体验的行列�
  图一：
  ![](https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_1.png)
  图二：
- ![](.https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_2.png)
+ ![](https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_2.png)
 
 #### 服务开发
 
