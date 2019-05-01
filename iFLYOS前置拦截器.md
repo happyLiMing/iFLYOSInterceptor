@@ -36,7 +36,9 @@ iFLYOS平台推出以来，有越来越多的开发者加入了体验的行列�
  - 编写语料	 打开{app} app绑定开放实体 IFLYTEK.APP,构建测试没有问题后进行发布。如果对自定义技能开发还不熟悉，可以先参考[自定义技能开发教程](https://doc.iflyos.cn/studio/#%E6%8A%80%E8%83%BD)
  - 创建webapi应用并配置该技能
  - 在 准备阶段 创建的设备中配置前置拦截器。操作步骤如图
+ 图一：
  ![](https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_1.png)
+ 图二：
  ![](.https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_2.png)
 
 #### 服务开发
