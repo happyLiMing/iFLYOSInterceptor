@@ -127,10 +127,11 @@ public class IFLYOSPreServlet extends HttpServlet {
 				body.put("response", responsedata);
 				iflyos.log(Level.INFO, " response body  = " + body.toJSONString());
 
-				// repsonse to AIUI server
+				// 指令响应
 				response.setContentType("application/json;charset=utf-8");
 				response.getWriter().append(body.toString());
 			} else {
+				//返回204状态码，内容为空
 				response.setStatus(204);
 			}
 		}
