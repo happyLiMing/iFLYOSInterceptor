@@ -1,10 +1,10 @@
-#iFLYOS Project
+#i FLYOS Project
 
-#教你玩转iFLYOS前/后拦截器
+# 教你玩转iFLYOS前/后拦截器
 - 刘立明 2019.5.1
 - 该工程是在小飞极客版音箱上使用iFLYOS前拦截器实现自定义技能开发的示例
 
-##背景
+## 背景
 iFLYOS平台推出以来，有越来越多的开发者加入了体验的行列，并且有越来越多体验非常棒的音箱涌入市场。也有不少开发者在开发过程中遇到不少问题，为了方便大家能够快速入门体验开发的过程，我还是决定将开发流程依次跟大家讲解。
 
 ### 准备
@@ -36,9 +36,9 @@ iFLYOS平台推出以来，有越来越多的开发者加入了体验的行列�
  - 编写语料	 打开{app} app绑定开放实体 IFLYTEK.APP,构建测试没有问题后进行发布。如果对自定义技能开发还不熟悉，可以先参考[自定义技能开发教程](https://doc.iflyos.cn/studio/#%E6%8A%80%E8%83%BD)
  - 创建webapi应用并配置该技能
  - 在 准备阶段 创建的设备中配置前置拦截器。操作步骤如图
- ![](./img/lan_1.png)
+ ![](https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_1.png)
  
- ![](./img/lan_2.png)
+ ![](.https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_2.png)
 
 #### 服务开发
 
@@ -49,7 +49,7 @@ iFLYOS平台推出以来，有越来越多的开发者加入了体验的行列�
 
 #### 代码实现
 
-#####step 1 新建Servlet,接收post响应
+##### step 1 新建Servlet,接收post响应
  
 ```
 	
@@ -113,7 +113,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
  }
 ```
 
-#####step 2 技能指令响应说明
+#### step 2 技能指令响应说明
 
 上面的代码其实不难理解，但是可能会让人困惑的是为什么返回的响应是这种格式的，其目的是为了什么呢？我们返回的这部分内容便是os指令的标准格式。技能[响应协议](https://doc.iflyos.cn/service/skill_3rd/Skill_Response.html#body%E7%A4%BA%E4%BE%8B)如下：
 
@@ -186,7 +186,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 ```
 如果希望设备做出不同的反馈或者实现不同的功能控制，只需要修改directives里面的指令和outputSpeech等内容即可。支持的指令请参考：[设备能力介绍API](https://doc.iflyos.cn/device/interface/)
 
-#### 多轮对话场景
+### 多轮对话场景
 上面的示例我们展现了是单次交互，但是实际使用场景中肯定会遇到多轮对话的需求。比如如下场景：
 	
 	你：蓝小飞
@@ -199,7 +199,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 
 	你：好的/取消
 
-####设计实现
+### 设计实现
 对于多轮对话，我们可以通过技能云函数来实现，但是为了方便，我们直接使用平台上界面的意图确认实现上面对话场景中的需求。技能构建发布后我们发现，拦截器收到的响应变成了如下内容：
 
 ```
@@ -403,7 +403,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 ```
 
 上面我们下发的text内容不再是“好的，收到您的请求”而是意图确认的内容，也就是answer中的text内容“您确认要打开i讯飞吗？”。同时您可能也注意到，为了让音箱继续新的会话，我们在response中添加了另外两个参数，shouldEndSession 和 expectSpeech.字如其义，这两个参数的含义如下：
-![](./img/lan_3.png)
+![](https://github.com/happyLiMing/iFLYOSInterceptor/blob/master/lan_3.png)
 
 
 ### 总结
